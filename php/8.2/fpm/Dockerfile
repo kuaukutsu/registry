@@ -14,10 +14,10 @@ RUN apk --update add ca-certificates
 RUN apk update \
     && apk add --no-cache --virtual .persistent-deps \
         git \
-		curl \
-		wget \
-		tar \
-		libressl \
+        curl \
+        wget \
+        tar \
+        libressl \
         freetype \
         openssl \
         unzip \

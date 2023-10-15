@@ -22,7 +22,7 @@ $ echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
 
 ### Build
 
-Default: php 8.1
+Default: php version 8.1
 
 ```shell
 make fpm-build
