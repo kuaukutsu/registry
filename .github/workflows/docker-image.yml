@@ -1,10 +1,8 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  release:
+    types: [published]
 
 jobs:
   buildx:
@@ -27,3 +25,10 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: php:8.1-cli
+      - name: Build PHP 8.2-cli
+        uses: docker/build-push-action@v5
+        with:
+          context: ./php/8.2/cli
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: php:8.2-cli
