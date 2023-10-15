@@ -16,7 +16,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
         with: 
           platforms: linux/amd64,linux/arm64
-      - name: Build and push
+      - name: Build PHP 8.1-cli
         uses: docker/build-push-action@v5
         with:
           secrets: |

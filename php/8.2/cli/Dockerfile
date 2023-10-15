@@ -38,4 +38,4 @@ RUN install-php-extensions \
     zip
 
 # Configure
-COPY php/8.2/cli/php.ini /usr/local/etc/php/php.ini
+COPY ./php.ini /usr/local/etc/php/php.ini

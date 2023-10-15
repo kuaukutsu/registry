@@ -38,7 +38,7 @@ RUN install-php-extensions \
     zip
 
 # Configure
-COPY php/8.2/fpm/php.ini /usr/local/etc/php/php.ini
-COPY php/8.2/fpm/www.conf /usr/local/etc/php-fpm.d/www.conf
+COPY ./php.ini /usr/local/etc/php/php.ini
+COPY ./www.conf /usr/local/etc/php-fpm.d/www.conf
 
 EXPOSE 9000
