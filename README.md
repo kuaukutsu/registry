@@ -3,6 +3,8 @@
 Store and manage Docker and OCI images in the Container registry, 
 which uses the package namespace https://ghcr.io
 
+[![Docker Image CI](https://github.com/kuaukutsu/registry/actions/workflows/docker-image.yml/badge.svg)](https://github.com/kuaukutsu/registry/actions/workflows/docker-image.yml)
+
 Save your personal access token (classic). We recommend saving your token as an environment variable.
 
 ```shell
