@@ -1,7 +1,7 @@
-FROM php:8.2-cli-alpine3.18
+FROM php:8.3-fpm-alpine3.18
 
 ################################
-###    CLI BASE LAYER        ###
+###    FPM BASE LAYER        ###
 ################################
 
 # https://github.com/mlocati/docker-php-extension-installer
@@ -37,3 +37,6 @@ RUN install-php-extensions \
 
 # Configure
 COPY ./php.ini /usr/local/etc/php/php.ini
+COPY ./www.conf /usr/local/etc/php-fpm.d/www.conf
+
+EXPOSE 9000

@@ -27,14 +27,12 @@ RUN apk update \
 RUN install-php-extensions \
     apcu \
     opcache \
-    gd \
     intl \
     pcntl \
     pdo_mysql \
     pdo_pgsql \
     redis \
     sockets \
-    uuid \
     zip
 
 # Configure

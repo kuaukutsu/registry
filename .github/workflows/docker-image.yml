@@ -35,6 +35,15 @@ jobs:
           tags: ghcr.io/${{ github.repository_owner }}/php:8.1-cli
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      - name: Build PHP 8.1-fpm
+        uses: docker/build-push-action@v5
+        with:
+          context: ./php/8.1/fpm
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/php:8.1-fpm
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
       - name: Build PHP 8.2-cli
         uses: docker/build-push-action@v5
         with:
@@ -42,5 +51,32 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/php:8.2-cli
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Build PHP 8.2-fpm
+        uses: docker/build-push-action@v5
+        with:
+          context: ./php/8.2/fpm
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/php:8.2-fpm
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Build PHP 8.3-cli
+        uses: docker/build-push-action@v5
+        with:
+          context: ./php/8.3/cli
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/php:8.3-cli
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Build PHP 8.3-fpm
+        uses: docker/build-push-action@v5
+        with:
+          context: ./php/8.3/fpm
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/php:8.3-fpm
           cache-from: type=gha
           cache-to: type=gha,mode=max
