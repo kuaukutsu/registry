@@ -80,3 +80,21 @@ jobs:
           tags: ghcr.io/${{ github.repository_owner }}/php:8.3-fpm
           cache-from: type=gha
           cache-to: type=gha,mode=max
+      - name: Build PHP 8.4-cli
+        uses: docker/build-push-action@v5
+        with:
+          context: ./php/8.4/cli
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/php:8.4-cli
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Build PHP 8.4-fpm
+        uses: docker/build-push-action@v5
+        with:
+          context: ./php/8.4/fpm
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/php:8.4-fpm
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
