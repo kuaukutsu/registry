@@ -66,6 +66,16 @@ docker pull ghcr.io/kuaukutsu/php:8.3-cli
 docker pull ghcr.io/kuaukutsu/php:8.3-fpm
 ```
 
+### PHP 8.4
+
+```shell
+docker pull ghcr.io/kuaukutsu/php:8.4-cli
+```
+
+```shell
+docker pull ghcr.io/kuaukutsu/php:8.4-fpm
+```
+
 ## update
 
-- 2024/04/13
+- 2025/02/21
