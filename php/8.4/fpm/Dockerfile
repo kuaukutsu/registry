@@ -1,4 +1,4 @@
-FROM php:8.4-fpm-alpine3.19
+FROM php:8.4-fpm-alpine3.20
 
 ################################
 ###    FPM BASE LAYER        ###
