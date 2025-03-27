@@ -20,6 +20,11 @@ $ echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
 ## Docs:
 - https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
 
+buildx on linux
+```shell
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+```
+
 ## Registry
 
 ### Build
