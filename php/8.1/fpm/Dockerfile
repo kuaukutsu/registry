@@ -16,6 +16,7 @@ RUN apk update \
         git \
         curl \
         wget \
+        fcgi \
         tar \
         libressl \
         freetype \
