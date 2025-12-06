@@ -1,4 +1,4 @@
-FROM php:8.4-cli-alpine3.23
+FROM php:8.5-cli-alpine3.23
 
 ################################
 ###    CLI BASE LAYER        ###

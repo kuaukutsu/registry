@@ -1,7 +1,7 @@
-FROM php:8.4-cli-alpine3.23
+FROM php:8.5-fpm-alpine3.23
 
 ################################
-###    CLI BASE LAYER        ###
+###    FPM BASE LAYER        ###
 ################################
 
 # https://github.com/mlocati/docker-php-extension-installer
@@ -16,6 +16,7 @@ RUN apk update \
         git \
         curl \
         wget \
+        fcgi \
         tar \
         libressl \
         freetype \
@@ -37,3 +38,6 @@ RUN install-php-extensions \
 
 # Configure
 COPY ./php.ini /usr/local/etc/php/php.ini
+COPY ./www.conf /usr/local/etc/php-fpm.d/www.conf
+
+EXPOSE 9000
