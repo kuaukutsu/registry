@@ -1,4 +1,4 @@
-PHP_VERSION ?= 8.3
+PHP_VERSION ?= 8.4
 
 fpm-build:
 	docker buildx build --push \
