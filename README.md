@@ -29,7 +29,7 @@ docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
 ### Build
 
-Default: php version 8.3
+Default: php version 8.4
 
 ```shell
 make fpm-build
@@ -93,4 +93,4 @@ docker pull ghcr.io/kuaukutsu/php:8.5-fpm
 
 ## update
 
-- 2025/12/06
+- 2026/02/11
