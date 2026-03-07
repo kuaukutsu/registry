@@ -37,3 +37,21 @@ RUN install-php-extensions \
 
 # Configure
 COPY ./php.ini /usr/local/etc/php/php.ini
+
+# profile
+RUN <<EOF
+  cat <<'INNER_EOF' >> /etc/profile
+
+  # php version by login shell
+  parse_php_version() {
+      php -v | head -n 1 | awk '{print $2}'
+  }
+
+  if [ -n "$BASH_VERSION" ]; then
+      PS1='[$(parse_php_version)] \[\033[0;34m\]\w\[\033[0m\] \$ '
+  else
+      PS1='[$(parse_php_version)] $PWD $ '
+  fi
+  export PS1
+INNER_EOF
+EOF
