@@ -7,6 +7,9 @@ FROM php:8.5-fpm-alpine3.23
 # https://github.com/mlocati/docker-php-extension-installer
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
 
+# PIE executable, available in inherited images https://github.com/php/pie
+COPY --from=ghcr.io/php/pie:bin /pie /usr/local/bin/pie
+
 # make sure you can use HTTPS
 RUN apk --update add ca-certificates
 

@@ -91,6 +91,23 @@ docker pull ghcr.io/kuaukutsu/php:8.5-cli
 docker pull ghcr.io/kuaukutsu/php:8.5-fpm
 ```
 
+## Settings
+
+### pie install
+
+```Dockerfile
+# pie
+RUN <<EOF
+    set -eux;
+    apk add --no-cache --virtual .pie-build-deps \
+        $PHPIZE_DEPS \
+        automake \
+        libtool;
+    pie install --no-interaction --no-cache iliaal/fast_uuid;
+    apk del .pie-build-deps;
+EOF
+```
+
 ## update
 
-- 2026/02/11
+- 2026/10/11
